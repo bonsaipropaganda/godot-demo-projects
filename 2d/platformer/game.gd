@@ -22,3 +22,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			_pause_menu.close()
 		get_tree().root.set_input_as_handled()
+
+
+func _on_player_player_death() -> void:
+	$Level/Player.position = $StartPos.position

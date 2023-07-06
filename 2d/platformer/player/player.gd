@@ -2,6 +2,9 @@ class_name Player extends CharacterBody2D
 
 
 signal coin_collected()
+signal player_death()
+
+var health = 3
 
 const WALK_SPEED = 200.0
 const ACCELERATION_SPEED = WALK_SPEED * 6.0
@@ -86,3 +89,11 @@ func try_jump() -> void:
 		return
 	velocity.y = JUMP_VELOCITY
 	jump_sound.play()
+
+
+func _on_hit_box_area_entered(area: Area2D) -> void:
+	if "Enemy" in area.get_parent().name:
+		health -= 1
+	if health == 0:
+		player_death.emit()
+		health = 3

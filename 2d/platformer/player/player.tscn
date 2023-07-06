@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://d0ni64ucb3ym2"]
+[gd_scene load_steps=19 format=3 uid="uid://d0ni64ucb3ym2"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://go76jbr7e1px" path="res://player/player.webp" id="2"]
 [ext_resource type="AudioStream" uid="uid://i2vnokf2khqj" path="res://player/jump.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://bpxywy45eqgwy" path="res://player/shoot.wav" id="4"]
+[ext_resource type="PackedScene" uid="uid://c4oi11g3c3f8l" path="res://hit_box.tscn" id="6_w660n"]
 [ext_resource type="Script" path="res://player/gun.gd" id="9"]
 
 [sub_resource type="Animation" id="1"]
@@ -267,3 +268,9 @@ position = Vector2(668.073, 262.788)
 scale = Vector2(1.49157, 1.46265)
 action = "shoot"
 visibility_mode = 1
+
+[node name="HitBox" parent="." instance=ExtResource("6_w660n")]
+position = Vector2(-3, -9)
+scale = Vector2(0.760001, 1)
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

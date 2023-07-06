@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://bd478yrtijbfn"]
+[gd_scene load_steps=16 format=3 uid="uid://bd478yrtijbfn"]
 
 [ext_resource type="Texture2D" uid="uid://c2aisfmq85suf" path="res://player/bullet.webp" id="1"]
 [ext_resource type="AudioStream" uid="uid://bbxjxs8sms61b" path="res://enemy/explode.wav" id="2"]
 [ext_resource type="AudioStream" uid="uid://brtn51vs7jaet" path="res://enemy/hit.wav" id="3"]
 [ext_resource type="Texture2D" uid="uid://cdy6gikv8wka7" path="res://enemy/enemy.webp" id="4"]
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://c4oi11g3c3f8l" path="res://hit_box.tscn" id="6_4spor"]
 
 [sub_resource type="CanvasItemMaterial" id="1"]
 
@@ -295,3 +296,5 @@ stream = ExtResource("3")
 
 [node name="Explode" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2")
+
+[node name="HitBox" parent="." instance=ExtResource("6_4spor")]

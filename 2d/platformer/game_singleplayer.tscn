@@ -22,4 +22,8 @@ layer = 100
 
 [node name="Music" parent="." instance=ExtResource("5_rkna2")]
 
+[node name="StartPos" type="Marker2D" parent="."]
+position = Vector2(88, 535)
+
 [connection signal="coin_collected" from="Level/Player" to="InterfaceLayer/PauseMenu" method="_on_coin_collected"]
+[connection signal="player_death" from="Level/Player" to="." method="_on_player_player_death"]
