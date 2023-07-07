@@ -4,7 +4,8 @@ class_name Player extends CharacterBody2D
 signal coin_collected()
 signal player_death()
 
-var health = 3
+var max_health = 3
+var health = max_health
 
 const WALK_SPEED = 200.0
 const ACCELERATION_SPEED = WALK_SPEED * 6.0
@@ -96,4 +97,4 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 		health -= 1
 	if health == 0:
 		player_death.emit()
-		health = 3
+		health = max_health
