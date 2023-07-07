@@ -24,8 +24,8 @@ layer = 100
 [node name="HeartContainer" parent="InterfaceLayer" instance=ExtResource("5_7sjqd")]
 offset_left = 10.0
 offset_top = 10.0
-offset_right = 66.0
-offset_bottom = 26.0
+offset_right = 10.0
+offset_bottom = 10.0
 scale = Vector2(3, 3)
 
 [node name="Music" parent="." instance=ExtResource("5_rkna2")]

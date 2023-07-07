@@ -1,8 +1,12 @@
 class_name Game extends Node
 
-
+# node references
 @onready var _pause_menu := $InterfaceLayer/PauseMenu as PauseMenu
+@onready var player := $Level/Player
+@onready var heart_container := $InterfaceLayer/HeartContainer
 
+func _ready() -> void:
+	heart_container.set_max_hearts(player.max_health)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"toggle_fullscreen"):
