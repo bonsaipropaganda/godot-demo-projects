@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ixy03whji3r4"]
+
+[ext_resource type="PackedScene" uid="uid://cy7efm24sf6i" path="res://gui/HeartGui.tscn" id="1_8pkfs"]
+
+[node name="HeartContainer" type="HBoxContainer"]
+alignment = 1
+
+[node name="HeartGui" parent="." instance=ExtResource("1_8pkfs")]
+layout_mode = 2
+
+[node name="HeartGui2" parent="." instance=ExtResource("1_8pkfs")]
+layout_mode = 2
+
+[node name="HeartGui3" parent="." instance=ExtResource("1_8pkfs")]
+layout_mode = 2
